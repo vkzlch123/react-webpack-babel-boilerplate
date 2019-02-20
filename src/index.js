@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { Component } from "react";
 import FormContainer from "./js/components/container/FormContainer.jsx";
 import ReactDOM from "react-dom";
 
-const wrapper = document.getElementById("create-article-form");
-wrapper ? ReactDOM.render(<FormContainer />, wrapper) : false;
+class App extends Component {
+  render() {
+    return (
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-md-4 offset-md-1">
+            <p>Create a new article</p>
+            <FormContainer />
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+const wrapper = document.getElementById("main");
+wrapper ? ReactDOM.render(<App />, wrapper) : false;
